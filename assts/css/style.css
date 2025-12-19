@@ -1,0 +1,29 @@
+.box input {
+  display: none;
+}
+
+.box label {
+  padding: 8px 15px;
+  border: 2px solid #ff4fa0;
+  border-radius: 20px;
+  margin: 5px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.images {
+  display: none;
+  margin-top: 20px;
+}
+
+#p1:checked ~ .img1 {
+  display: block;
+}
+
+#p2:checked ~ .img2 {
+  display: block;
+}
+
+#p3:checked ~ .img3 {
+  display: block;
+}
