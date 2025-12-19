@@ -358,13 +358,13 @@ function zoomin() {
 
 function Image1() {
    const img =document.getElementById("img2");
-   img.src="./jstailwind/assts/img/function img3.jpeg"
+   img.src="/jstailwind/assts/img/function img2.jpeg"
 }
 
 
 function Image2() {
    const img =document.getElementById("img2");
-   img.src="/jstailwind/assts/img/function img4.jpeg"
+   img.src="/jstailwind/assts/img/function img3.jpeg"
 }
 
 
