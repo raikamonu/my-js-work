@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body class="bg-blue-400 justify-items-center ">
+<div>
+<h2 class="text-5xl mt-5 mb-10 text-center font-bold font-serif text-white">Registration Form</h2>
+<div class="shadow-2xl max-w-fit rounded-2xl pt-10 pb-10 mt-20 bg-green-300 ps-5  ">
+    <div class="bg-blue-300">
+        <label class="text-3xl ps-4">Name: </label>
+        <input id="Name" type="text" class="pe-40 p-4">
+    </div><br>
+    <div class="bg-blue-300">
+        <label class="text-3xl ps-4">Age: </label>
+        <input id="Age" type="text" class="pe-47 p-4">
+    </div><br>
+    <div class="bg-blue-300">
+        <label class="text-3xl ps-4">City: </label>
+        <input id="City" type="text" class="pe-47 p-4">
+    </div><br>
+    <div> 
+        <button onclick="submit()" class="text-3xl border-2 p-3 ps-8 pe-8 bg-blue-600 border-blue-600 hover:bg-blue-400 text-white rounded-4xl"> Submit</button> 
+    </div> <br>
+    <div id="fullName" class="bg-blue-300 text-center text-white font-semibold "></div>
+</div>
+</div>
+
+<div class="shadow-2xl text-center content-center mt-20 rounded-4xl mb-20 ps-5 bg-green-300 max-w-fit  ">
+<table class=" text-3xl mt-12 mb-12">
+    <thead class="mt-5 text-white bg-blue-400">
+    <tr class="">
+            <th>Index</th>
+            <th class="">Name</th>
+            <th  class="ps-4">Age</th>
+            <th>City</th>
+            <th class="">Action</th>
+        </tr>
+        </thead>
+        <tbody class="mt-5 text-white bg-green-300 ">
+        <tr class="hover:bg-blue-500">
+            <td>0</td>
+            <td>Tanish</td>
+            <td  class="">2</td>
+            <td>Hanumangarh</td>
+            <td class="">
+                <i class="fa-solid fa-pencil"></i>
+                <i class="fa-regular fa-trash-can"></i>
+            </td>
+        </tr>
+        <tr class="hover:bg-blue-500" >
+            <td>1</td>
+            <td>Vanshu</td>
+            <td  class="">3</td>
+            <td>Jhunjhnu</td>
+            <td class="">
+                <i class="fa-solid fa-pencil"></i>
+                <i class="fa-regular fa-trash-can"></i>
+            </td>
+        </tr>
+        <tr class="hover:bg-blue-500">
+            <td>2</td>
+            <td>Monu</td>
+            <td  class="">18</td>
+            <td>Fatehabad</td>
+            <td class="">
+                <i class="fa-solid fa-pencil"></i>
+                <i class="fa-regular fa-trash-can"></i>
+            </td>
+        </tr>
+        <tr class="hover:bg-blue-500">
+            <td>3</td>
+            <td>Hanu</td>
+            <td  class="">19</td>
+            <td>Nohar</td>
+            <td class="">
+                <i class="fa-solid fa-pencil"></i>
+                <i class="fa-regular fa-trash-can"></i>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+<!-- <div class="shadow-2xl text-center content-center mt-20 rounded-4xl mb-20 ps-5 bg-green-300 max-w-fit  ">
+<table class=" text-3xl mt-12 mb-12" >
+    <thead class="mt-5 text-white bg-blue-400">
+    <tr class="">
+            <th>Index</th>
+            <th class="">Name</th>
+            <th  class="ps-4">Age</th>
+            <th>City</th>
+            <th class="">Action</th>
+        </tr>
+        </thead>
+        <tbody id="tableBody" class="mt-5 text-white bg-green-300 ">
+        
+        </tbody>
+    </table>
+</div> -->
+
+
+<div class="shadow-2xl max-w-fit rounded-2xl pt-10 pb-10 mt-20 bg-green-300 ps-5  ">
+    <div class="bg-blue-300 mb-5">
+    <label class="text-3xl ps-4">Value 1: </label>
+    <input type="number" id="value1" class="pe-40 p-4"><br>
+    </div>
+     <div class="bg-blue-300">
+    <label class="text-3xl ps-4">Value 2: </label>
+    <input type="number" id="value2" class="pe-40 p-4"><br>
+    </div>
+<button onclick="sum()" class="text-2xl border-2 p-3 mt-5 pe-20 bg-blue-600 border-blue-600 hover:bg-blue-400 text-white rounded-4xl"> sum</button>
+  <div id="sum" class="bg-blue-300 text-center text-white font-semibold "></div>
+ 
+  </div>
+
+
+  <div class="shadow-2xl max-w-fit rounded-2xl pt-10 pb-10 mt-20 bg-green-300 ps-5  ">
+    <div class="bg-blue-300 mb-5">
+    <label class="text-3xl ps-4">Value 3: </label>
+    <input type="number" id="value3" class="pe-40 p-4"><br>
+    </div>
+    <div class="bg-blue-300">
+    <label class="text-3xl ps-4">Value 4: </label>
+    <input type="number" id="value4" class="pe-40 p-4"><br>
+    </div>
+<button onclick="sub()" class="text-2xl border-2 p-3 mt-5 pe-20 bg-blue-600 border-blue-600 hover:bg-blue-400 text-white rounded-4xl"> sub</button>
+  <div id="sub" class="bg-blue-300 text-center text-white font-semibold "></div>
+ 
+  </div>
+
+
+  <div class="shadow-2xl max-w-fit rounded-2xl pt-10 pb-10 mt-20 bg-green-300 ps-5  ">
+    <div class="bg-blue-300 mb-5">
+    <label class="text-3xl ps-4">Value 5: </label>
+    <input type="number" id="value5" class="pe-40 p-4"><br>
+    </div>
+    <div class="bg-blue-300">
+    <label class="text-3xl ps-4">Value 6: </label>
+    <input type="number" id="value6" class="pe-40 p-4"><br>
+    </div>
+<button onclick="multiple()" class="text-2xl border-2 p-3 mt-5 pe-20 bg-blue-600 border-blue-600 hover:bg-blue-400 text-white rounded-4xl"> multiple</button>
+  <div id="multiple" class="bg-blue-300 text-center text-white font-semibold "></div>
+ 
+  </div>
+
+
+   <div class="shadow-2xl max-w-fit rounded-2xl pt-10 pb-10 mt-20 bg-green-300 ps-5 mb-20 ">
+    <div class="bg-blue-300 mb-5">
+    <label class="text-3xl ps-4">Value 7: </label>
+    <input type="number" id="value7" class="pe-40 p-4"><br>
+    </div>
+    <div class="bg-blue-300">
+    <label class="text-3xl ps-4">Value 8: </label>
+    <input type="number" id="value8" class="pe-40 p-4"><br>
+    </div>
+<button onclick="divide()" class="text-2xl border-2 p-3 mt-5 pe-20 bg-blue-600 border-blue-600 hover:bg-blue-400 text-white rounded-4xl"> divide</button>
+  <div id="divide" class="bg-blue-300 text-center text-white font-semibold "></div>
+ 
+  </div>
+
+  
+ 
+    
+    <script src="../assts/index.js"></script>
+</body>
+
+</html>
