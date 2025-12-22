@@ -1,33 +1,3 @@
- function submit()
- {
-  
-  const  Name= document.getElementById("Name").value;
-  const Age=document.getElementById("Age").value;
-    const City=document.getElementById("City").value;
-  const fullName = `${Name}   ${Age}  ${City}`
-   
-  const div = document.getElementById("fullName").innerText=fullName;
-
- 
-//  const table = document.getElementById("tableBody");
-
-//   table.innerHTML += `
-//     <tr class="hover:bg-blue-500">
-        
-//         <td>${Name}</td>
-//         <td>${Age}</td>
-//         <td>${City}</td>
-//         <td>
-//             <i class="fa-solid fa-pencil"></i>
-//             <i class="fa-regular fa-trash-can"></i>
-//         </td>
-//     </tr>
-//   `;
-
-  
- 
- }
-
 
   function sum()
  {
@@ -70,3 +40,67 @@
    
   document.getElementById("divide").innerText=divide;
  }
+
+
+
+
+ 
+const users =[];
+ 
+ function handleDelete(index)
+ {
+     users.splice(index,1);
+     showList();
+ 
+ }
+function handleEdit(index)
+ {
+    console.log('Edit Clicked'+index)
+ }
+ 
+ 
+ 
+ 
+function showList()
+{
+    let htmlBuilder='';
+ 
+ 
+    users.forEach( (item, index)=>{
+        htmlBuilder+=`
+         <tr>
+         <td> ${item.Index}</td>
+           <td> ${item.name}</td>
+           <td> ${item.age} </td>
+           <td> ${item.city}</td>
+           <td> <button onclick='handleDelete(${index} )'><i class="fa-regular fa-trash-can"></i></button>  </td>
+           <td> <button  onclick='handleEdit(${index})'><i class="fa-solid fa-pencil"></i></button></td>
+         </tr>
+        `
+    }
+ 
+    ) 
+ 
+      document.getElementById('data').innerHTML=htmlBuilder;
+}
+ 
+function handleSubmit()
+{
+    const name= document.getElementById('name').value;
+    const age= document.getElementById('age').value;
+    const city= document.getElementById('city').value;
+    document.getElementById('name').value="";
+     document.getElementById('age').value="";
+ document.getElementById('city').value="";
+ 
+     const user ={
+        name:name,
+        age:age,
+        city:city
+     }
+ 
+      users.push(user);
+      showList();
+     console.log(users);
+ 
+}

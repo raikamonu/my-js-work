@@ -204,6 +204,7 @@
 
 
 
+
 // // ....USE FOR CONDITIONAL ASSIGNMENT....
 // // assignment-3
 
@@ -5373,9 +5374,10 @@
 
 
 
-
-
-
+let a="monu";
+let c="raika";
+result = a+c  ;
+console.log(result);
 
 
 
